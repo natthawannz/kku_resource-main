@@ -188,11 +188,11 @@
       "description": "",
       "type": "image",
       "category": "education",
-      "tags": ["อบรม","การศึกษา", "มหาลัยขอนแก่น","มหาลัย","แพทย์ศาสตร์"],
+      "tags": ["การศึกษา", "มหาลัยขอนแก่น","มหาลัย","แพทย์ศาสตร์"],
       "fileUrl": "/mock/resources/hero-14.jpg",
       "thumbnailUrl": "/mock/resources/hero-14.jpg",
       "uploadedBy": "admin",
-      "downloadCount": 48,
+      "downloadCount": 78,
       "createdAt": "2024-04-06T10:00:00Z",
       "updatedAt": "2024-04-06T10:00:00Z"
     },
