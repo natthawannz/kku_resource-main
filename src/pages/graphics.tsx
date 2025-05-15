@@ -85,12 +85,13 @@ const PageGallery = () => {
   const itemsPerPage = 12;
   const [page, setPage] = useState(1);
 
-  const images = resourcesData.resources.filter(
-    (item) => item.type === "image" || item.type === "graphic"
-  );
+  const graphic = resourcesData.resources.filter(
+  (item) => item.type?.toLowerCase() === "graphic"
+);
 
-  const totalPages = Math.ceil(images.length / itemsPerPage);
-  const paginatedItems = images.slice(
+
+  const totalPages = Math.ceil(graphic.length / itemsPerPage);
+  const paginatedItems = graphic.slice(
     (page - 1) * itemsPerPage,
     page * itemsPerPage
   );
@@ -106,6 +107,7 @@ const PageGallery = () => {
             <option>การแพทย์</option>
             <option>รอบรั้วมหาวิทยาลัย</option>
             <option>การศึกษา</option>
+            <option>กราฟฟิก</option>
           </select>
           <select className={classes.dropdown}>
             <option>จัดเรียงตาม</option>
@@ -123,7 +125,7 @@ const PageGallery = () => {
       <div className={classes.grid}>
         {paginatedItems.map((item) => (
           <div className={classes.card} key={item.id}>
-            <img src={item.thumbnailUrl} alt={item.title} className={classes.image} />
+            <img src={item.thumbnailUrl || "#"} alt={item.title} className={classes.image} />
             <div className={classes.title}>{item.title}</div>
           </div>
         ))}
